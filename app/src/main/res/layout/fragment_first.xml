@@ -1,15 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".FirstFragment">
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto">
+    <!--<FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">-->
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        <GridView
+            android:id="@+id/gridView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:clipToPadding="false"
+            android:paddingBottom="56.0dip"
+            android:stretchMode="columnWidth" />
+   <!-- </FrameLayout>-->
 
-</FrameLayout>
+    <!--<RelativeLayout
+        android:id="@+id/relativeLayout"
+
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+            <TextView
+                android:gravity="center_horizontal"
+                android:id="@+id/tvResult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@+string/det"
+                android:singleLine="true"
+                />
+        </LinearLayout>
+    </RelativeLayout>-->
+</RelativeLayout>

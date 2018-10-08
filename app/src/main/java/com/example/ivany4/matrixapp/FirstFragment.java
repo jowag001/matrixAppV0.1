@@ -26,7 +26,7 @@ public class FirstFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_first, container, false);
         Bundle bundle = getArguments();
         String message = Integer.toString(bundle.getInt("count"));
-        ((TextView)view.findViewById(R.id.textView)).setText("PageNumber: " + message);
+       // ((TextView)view.findViewById(R.id.tvResult)).setText("PageNumber: " + message);
 
         return view;
     }
