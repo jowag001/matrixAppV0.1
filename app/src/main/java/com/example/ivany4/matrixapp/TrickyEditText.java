@@ -5,9 +5,6 @@ import android.content.Context;
 import android.graphics.Rect;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
-import android.view.animation.Animation;
-
-import java.lang.annotation.Annotation;
 
 
 public class TrickyEditText extends android.support.v7.widget.AppCompatEditText {

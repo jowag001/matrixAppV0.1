@@ -17,18 +17,11 @@ public class GridViewAdapter extends BaseAdapter {
     private ArrayList<String> items;
     LayoutInflater inflater;
     Context context;
-    Activity activity;
 
-
-  //  EditText editText;
 
     public GridViewAdapter(ArrayList<String> items, Context context) {
         this.items = items;
-        //this.activity = activity;
         this.context = context;
-
-        //inflater = (LayoutInflater) activity
-          //       .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         this.inflater = LayoutInflater.from(context);
     }
 
@@ -55,11 +48,7 @@ public class GridViewAdapter extends BaseAdapter {
             view = inflater.inflate(R.layout.grid_item_matrix, parent, false);
         }
         EditText editText = (EditText) view.findViewById(R.id.editText);
-        editText.setText("huj");
-
-        //gridView.setNumColumns(items.size());
-
-
+        editText.setText(items.get(position));
         return view;
     }
 }

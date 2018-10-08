@@ -11,6 +11,7 @@ import me.relex.circleindicator.CircleIndicator;
 
 public class MainActivity extends AppCompatActivity {
     PagerAdapter collectionPagerAdapter;
+    GridViewAdapter adapter;
     private ViewPager viewPager;
     private GridView gridView;
     private ArrayList<String> list = new ArrayList<>();
@@ -28,12 +29,14 @@ public class MainActivity extends AppCompatActivity {
         CircleIndicator indicator = (CircleIndicator) findViewById(R.id.indicator);
         indicator.setViewPager(viewPager);
 
-        for (int i = 0; i < 5; i++) {
-            for (int j = 0; j < 5; j++)
+        setContentView(R.layout.fragment_first);
+        for (int i = 0; i < 2 ; i++) {
+            for (int j = 0; j < 2; j++)
                 list.add(i + "-" + j);
-        }
-        GridViewAdapter adapter = new GridViewAdapter(list, this);
 
+        }
+
+        GridViewAdapter adapter = new GridViewAdapter(list, this);
         gridView = (GridView) findViewById(R.id.gridView);
         gridView.setAdapter(adapter);
 

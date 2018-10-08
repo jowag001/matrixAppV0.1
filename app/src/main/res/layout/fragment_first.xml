@@ -4,7 +4,7 @@
     android:layout_height="fill_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:fab="http://schemas.android.com/apk/res-auto">
-    <!--<FrameLayout
+    <FrameLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent">-->
 
@@ -16,9 +16,9 @@
             android:clipToPadding="false"
             android:paddingBottom="56.0dip"
             android:stretchMode="columnWidth" />
-   <!-- </FrameLayout>-->
+    </FrameLayout>
 
-    <!--<RelativeLayout
+    <RelativeLayout
         android:id="@+id/relativeLayout"
 
         android:layout_width="fill_parent"
@@ -39,5 +39,5 @@
                 android:singleLine="true"
                 />
         </LinearLayout>
-    </RelativeLayout>-->
+    </RelativeLayout>
 </RelativeLayout>
