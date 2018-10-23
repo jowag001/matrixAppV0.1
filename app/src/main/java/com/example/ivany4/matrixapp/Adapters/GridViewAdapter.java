@@ -1,4 +1,4 @@
-package com.example.ivany4.matrixapp;
+package com.example.ivany4.matrixapp.Adapters;
 
 import android.app.Activity;
 import android.content.Context;
@@ -6,9 +6,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.GridView;
+
+import com.example.ivany4.matrixapp.R;
+import com.example.ivany4.matrixapp.TrickyEditText;
 
 import java.util.ArrayList;
 
@@ -19,10 +19,12 @@ public class GridViewAdapter extends BaseAdapter {
     Context context;
 
 
-    public GridViewAdapter(ArrayList<String> items, Context context) {
+    public GridViewAdapter(ArrayList<String> items, Activity activity/*, Context context*/) {
         this.items = items;
-        this.context = context;
-        this.inflater = LayoutInflater.from(context);
+        //this.context = context;
+        //this.inflater = LayoutInflater.from(context);
+        inflater = (LayoutInflater) activity
+                .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
 
     @Override
@@ -43,12 +45,12 @@ public class GridViewAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View view, ViewGroup parent) {
 
-        if(view == null)
-        {
+
             view = inflater.inflate(R.layout.grid_item_matrix, parent, false);
-        }
-        EditText editText = (EditText) view.findViewById(R.id.editText);
+
+        TrickyEditText editText = (TrickyEditText) view.findViewById(R.id.editText);
         editText.setText(items.get(position));
         return view;
+
     }
 }
