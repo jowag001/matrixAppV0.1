@@ -1,8 +1,6 @@
 package com.example.ivany4.matrixapp;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.GridView;
@@ -34,23 +32,19 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-   private void initFragment() {
-       viewPager = (ViewPager) findViewById(R.id.pager);
-       pagerAdapter = new PagerAdapter(this, getSupportFragmentManager(), this.fragments);
-       viewPager.setAdapter(pagerAdapter);
-       CircleIndicator indicator = (CircleIndicator) findViewById(R.id.indicator);
-       indicator.setViewPager(viewPager);
+    private void initFragment() {
+        viewPager = findViewById(R.id.pager);
+        pagerAdapter = new PagerAdapter(getSupportFragmentManager(), this.fragments);
+        viewPager.setAdapter(pagerAdapter);
+        CircleIndicator indicator = findViewById(R.id.indicator);
+        indicator.setViewPager(viewPager);
 
-       /*FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-       transaction.replace( R.id.pager, (Fragment) fragments);
-       transaction.addToBackStack(null);
-       transaction.commit();*/
 
-       /*setContentView(R.layout.fragment_first);
+        //setContentView(R.layout.fragment_first);
 
-        for (int i = 0; i < 2 ; i++) {
+        /*for (int i = 0; i < 2; i++) {
             for (int j = 0; j < 2; j++)
-                list.add(i + "-" +  j);
+                list.add(i + "-" + j);
 
         }
 

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-xmlns:android="http://schemas.android.com/apk/res/android">
-<com.example.ivany4.matrixapp.TrickyEditText
-    android:gravity="center"
-    android:id="@+id/editText"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:minWidth="50.0dip"
+    android:layout_height="fill_parent">
 
-    android:layout_centerInParent="true"
-    android:inputType="numberDecimal" />
+    <com.example.ivany4.matrixapp.TrickyEditText
+        android:id="@+id/editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+
+        android:inputType="numberDecimal"
+        android:minWidth="50.0dip" />
 </RelativeLayout>

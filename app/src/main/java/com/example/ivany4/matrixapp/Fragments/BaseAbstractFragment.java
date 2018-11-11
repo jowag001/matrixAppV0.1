@@ -9,12 +9,8 @@ public abstract class BaseAbstractFragment extends Fragment {
 
     private String title;
     protected Context context;
-    protected  View view;
+    protected View view;
 
-
-    public String getTitle() {
-        return title;
-    }
 
     @Nullable
     @Override
@@ -22,13 +18,18 @@ public abstract class BaseAbstractFragment extends Fragment {
         return context;
     }
 
+    public void setContext(Context context) {
+        this.context = context;
+    }
+
+
+    public String getTitle() {
+        return title;
+    }
+
     public void setTitle(String title) {
 
         this.title = title;
-    }
-
-    public void setContext(Context context) {
-        this.context = context;
     }
 
 

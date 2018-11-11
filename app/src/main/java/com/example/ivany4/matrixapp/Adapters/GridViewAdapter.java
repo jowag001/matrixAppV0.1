@@ -16,13 +16,9 @@ public class GridViewAdapter extends BaseAdapter {
 
     private ArrayList<String> items;
     LayoutInflater inflater;
-    Context context;
 
-
-    public GridViewAdapter(ArrayList<String> items, Activity activity/*, Context context*/) {
+    public GridViewAdapter(ArrayList<String> items, Activity activity) {
         this.items = items;
-        //this.context = context;
-        //this.inflater = LayoutInflater.from(context);
         inflater = (LayoutInflater) activity
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
@@ -46,7 +42,7 @@ public class GridViewAdapter extends BaseAdapter {
     public View getView(int position, View view, ViewGroup parent) {
 
 
-            view = inflater.inflate(R.layout.grid_item_matrix, parent, false);
+        view = inflater.inflate(R.layout.grid_item_matrix, parent, false);
 
         TrickyEditText editText = (TrickyEditText) view.findViewById(R.id.editText);
         editText.setText(items.get(position));

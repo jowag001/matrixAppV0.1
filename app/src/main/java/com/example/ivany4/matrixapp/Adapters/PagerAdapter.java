@@ -15,29 +15,17 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class PagerAdapter extends FragmentPagerAdapter {
-    private Context context;
     private Map<Integer, BaseAbstractFragment> pages;
 
-    public PagerAdapter(Context context, FragmentManager fm, Map<Integer, BaseAbstractFragment> pages) {
+    public PagerAdapter(FragmentManager fm, Map<Integer, BaseAbstractFragment> pages) {
         super(fm);
-        this.context = context;
         this.pages = pages;
-        initFragments(context);
+        initFragments();
     }
 
-   /* public PagerAdapter(FragmentManager fm, ArrayList<FirstFragment> pages) {
-        super(fm);
-        this.pages = pages;
-    }
-*/
     @Override
     public Fragment getItem(int position) {
-        /*Fragment fragment = new FirstFragment();
-        Bundle bundle = new Bundle();
-        bundle.putInt("count", position+1);
-        fragment.setArguments(bundle);
-        return fragment;*/
-       return pages.get(position);
+        return pages.get(position);
     }
 
     @Override
@@ -50,12 +38,13 @@ public class PagerAdapter extends FragmentPagerAdapter {
     public CharSequence getPageTitle(int position) {
         return (CharSequence) pages.get(position).getTitle();
     }
+
     //Das nötige Fragment initialisieren
-    private void initFragments(Context context){
+    private void initFragments() {
         pages = new HashMap<>();
-        pages.put(0, FirstFragment.getInstance(context));
-        pages.put(1, SecondFragment.getInstance(context));
-        pages.put(2, ResultFragment.getInstance(context));
+        pages.put(0, FirstFragment.getInstance());
+        pages.put(1, SecondFragment.getInstance());
+        pages.put(2, ResultFragment.getInstance());
 
     }
 }

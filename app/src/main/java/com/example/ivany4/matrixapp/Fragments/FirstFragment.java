@@ -1,8 +1,6 @@
 package com.example.ivany4.matrixapp.Fragments;
 
-import android.content.Context;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,32 +11,34 @@ import com.example.ivany4.matrixapp.R;
 
 public class FirstFragment extends BaseAbstractFragment {
     public static final int layout = R.layout.fragment_first;
-    FirstFragment fragment;
-    View view;
-
+    FirstFragment firstFragment;
     public FirstFragment() {
         // Required empty public constructor
     }
-    // getInstance constructor for creating fragment with arguments
-    public static FirstFragment getInstance(Context context){
-        Bundle bundle = new Bundle();
-        FirstFragment fragment = new FirstFragment();
-        fragment.setArguments(bundle);
-        fragment.setContext(context);
-        fragment.setTitle("первый");
-        return fragment;
-    }
 
+    // getInstance constructor for creating fragment with arguments
+    public static FirstFragment getInstance() {
+        Bundle bundle = new Bundle();
+        FirstFragment firstFragment = new FirstFragment();
+        firstFragment.setArguments(bundle);
+        firstFragment.setTitle("first");
+        return firstFragment;
+    }
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(layout, container, false);
+        if (view == null) {
+            view = inflater.inflate(layout, container, false);
+        }
+
         Bundle bundle = getArguments();
-        String message = bundle.getString(fragment.getTitle());
-        ((TextView)view.findViewById(R.id.tvResult)).setText(message);
+
+        //fehler beim getTitle..
+        //String message = bundle.getString(firstFragment.getTitle());
+        ((TextView) view.findViewById(R.id.tvResult)).setText("message");
         return view;
     }
 }
