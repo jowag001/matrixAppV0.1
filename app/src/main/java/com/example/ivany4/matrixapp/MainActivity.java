@@ -21,8 +21,6 @@ public class MainActivity extends AppCompatActivity {
     private ViewPager viewPager;
     private GridView gridView;
     private ArrayList<String> list = new ArrayList<>();
-    private Map<Integer, BaseAbstractFragment> fragments = new HashMap<>();
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,13 +32,13 @@ public class MainActivity extends AppCompatActivity {
 
     private void initFragment() {
         viewPager = findViewById(R.id.pager);
-        pagerAdapter = new PagerAdapter(getSupportFragmentManager(), this.fragments);
+        viewPager.setOffscreenPageLimit(3);
+        pagerAdapter = new PagerAdapter(getSupportFragmentManager()/*, this.fragments*/);
         viewPager.setAdapter(pagerAdapter);
         CircleIndicator indicator = findViewById(R.id.indicator);
         indicator.setViewPager(viewPager);
 
 
-        //setContentView(R.layout.fragment_first);
 
         /*for (int i = 0; i < 2; i++) {
             for (int j = 0; j < 2; j++)

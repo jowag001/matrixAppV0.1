@@ -12,39 +12,46 @@ import com.example.ivany4.matrixapp.Fragments.SecondFragment;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class PagerAdapter extends FragmentPagerAdapter {
     private Map<Integer, BaseAbstractFragment> pages;
+    private List<BaseAbstractFragment> pagesList;
 
-    public PagerAdapter(FragmentManager fm, Map<Integer, BaseAbstractFragment> pages) {
+    public PagerAdapter(FragmentManager fm/*, Map<Integer, BaseAbstractFragment> pages*/) {
         super(fm);
-        this.pages = pages;
+        //this.pages = pages;
         initFragments();
     }
 
     @Override
     public Fragment getItem(int position) {
-        return pages.get(position);
+        return pagesList.get(position);
     }
 
     @Override
     public int getCount() {
-        return pages.size();
+        return pagesList.size();
     }
 
 
     @Override
     public CharSequence getPageTitle(int position) {
-        return (CharSequence) pages.get(position).getTitle();
+        return pagesList.get(position).getTitle();
     }
 
     //Das nötige Fragment initialisieren
     private void initFragments() {
-        pages = new HashMap<>();
+        /*pages = new HashMap<>();
         pages.put(0, FirstFragment.getInstance());
         pages.put(1, SecondFragment.getInstance());
-        pages.put(2, ResultFragment.getInstance());
+        pages.put(2, ResultFragment.getInstance());*/
+
+        pagesList = new ArrayList<>();
+        pagesList.add(0, FirstFragment.getInstance());
+        pagesList.add(1, SecondFragment.getInstance());
+        pagesList.add(2, ResultFragment.getInstance());
 
     }
 }

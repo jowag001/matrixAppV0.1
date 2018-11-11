@@ -1,5 +1,6 @@
 package com.example.ivany4.matrixapp.Fragments;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,7 +12,7 @@ import com.example.ivany4.matrixapp.R;
 
 public class FirstFragment extends BaseAbstractFragment {
     public static final int layout = R.layout.fragment_first;
-    FirstFragment firstFragment;
+
     public FirstFragment() {
         // Required empty public constructor
     }
@@ -21,9 +22,11 @@ public class FirstFragment extends BaseAbstractFragment {
         Bundle bundle = new Bundle();
         FirstFragment firstFragment = new FirstFragment();
         firstFragment.setArguments(bundle);
-        firstFragment.setTitle("first");
+        //firstFragment.setContext(context);
+        //firstFragment.setTitle(context.getString(R.string.hello_blank_fragment));
         return firstFragment;
     }
+
 
 
     @Override
@@ -38,7 +41,9 @@ public class FirstFragment extends BaseAbstractFragment {
 
         //fehler beim getTitle..
         //String message = bundle.getString(firstFragment.getTitle());
-        ((TextView) view.findViewById(R.id.tvResult)).setText("message");
+        String message = Integer.toString(bundle.getInt("count"));
+        ((TextView) view.findViewById(R.id.tvResult)).setText(message);
         return view;
     }
+
 }

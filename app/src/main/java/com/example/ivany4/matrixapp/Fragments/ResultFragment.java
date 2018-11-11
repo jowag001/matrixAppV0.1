@@ -14,7 +14,6 @@ public class ResultFragment extends BaseAbstractFragment {
 
     public static final int layout = R.layout.fragment_result;
 
-
     public ResultFragment() {
         // Required empty public constructor
     }
@@ -36,9 +35,9 @@ public class ResultFragment extends BaseAbstractFragment {
         if (view == null) {
             view = inflater.inflate(layout, container, false);
         }
-       // Bundle bundle = getArguments();
-        //String message = Integer.toString(bundle.getInt("count"));
-        ((TextView) view.findViewById(R.id.tvResult)).setText("PageNumber: ");
+        Bundle bundle = getArguments();
+        String message = Integer.toString(bundle.getInt("count"));
+        ((TextView) view.findViewById(R.id.tvResult)).setText("PageNumber: " + message);
         return view;
     }
 
