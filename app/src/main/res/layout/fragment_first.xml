@@ -16,7 +16,7 @@
             android:layout_gravity="center"
             android:clipToPadding="false"
             android:paddingBottom="56.0dip"
-            android:stretchMode="columnWidth" />
+            android:stretchMode="columnWidth"/>
     </FrameLayout>
 
     <RelativeLayout

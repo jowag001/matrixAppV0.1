@@ -93,4 +93,44 @@
             app:fab_size="mini" />
     </com.github.clans.fab.FloatingActionMenu>
 
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/btnCalc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/indicator"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        app:fab_colorNormal="@color/colorAccent"
+        app:fab_colorPressed="@color/colorAccent"
+        app:fab_colorRipple="@android:color/white"
+        app:menu_animationDelayPerItem="10"
+        app:menu_icon="@drawable/ic_drag_handle_black_24dp"
+        app:menu_labels_ellipsize="end"
+        app:menu_labels_singleLine="true">
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/btnCalcSubtraction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_remove_black_24dp"
+            app:fab_label="@+string/subtraction"
+            app:fab_size="mini" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/btnCalcAddition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_add_black_24dp"
+            app:fab_label="@+string/addition"
+            app:fab_size="mini" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/btnCalcMultiplication"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_clear_black_24dp"
+            app:fab_label="@+string/multiplication"
+            app:fab_size="mini" />
+    </com.github.clans.fab.FloatingActionMenu>
+
 </RelativeLayout>
