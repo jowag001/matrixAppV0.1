@@ -26,6 +26,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        /*gridViewAdapter = new GridViewAdapter(list, this);
+        gridView = findViewById(R.id.gridView);
+        gridView.setAdapter(gridViewAdapter);*/
+
         initFragment();
 
     }
@@ -33,22 +38,10 @@ public class MainActivity extends AppCompatActivity {
     private void initFragment() {
         viewPager = findViewById(R.id.pager);
         viewPager.setOffscreenPageLimit(3);
-        pagerAdapter = new PagerAdapter(getSupportFragmentManager()/*, this.fragments*/);
+        pagerAdapter = new PagerAdapter(getSupportFragmentManager());
         viewPager.setAdapter(pagerAdapter);
         CircleIndicator indicator = findViewById(R.id.indicator);
         indicator.setViewPager(viewPager);
-
-
-
-        /*for (int i = 0; i < 2; i++) {
-            for (int j = 0; j < 2; j++)
-                list.add(i + "-" + j);
-
-        }
-
-        gridViewAdapter = new GridViewAdapter(list, this);
-        gridView = (GridView) findViewById(R.id.gridView);
-        gridView.setAdapter(gridViewAdapter);*/
 
     }
 }

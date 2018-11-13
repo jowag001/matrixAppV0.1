@@ -44,7 +44,7 @@ public class GridViewAdapter extends BaseAdapter {
 
         view = inflater.inflate(R.layout.grid_item_matrix, parent, false);
 
-        TrickyEditText editText = (TrickyEditText) view.findViewById(R.id.editText);
+        TrickyEditText editText = view.findViewById(R.id.editText);
         editText.setText(items.get(position));
         return view;
 

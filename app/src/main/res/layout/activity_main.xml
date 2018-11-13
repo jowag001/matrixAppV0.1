@@ -10,7 +10,8 @@
         android:id="@+id/container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_centerInParent="true" />
+        android:layout_centerInParent="true"
+        android:background="@color/colorPrimaryDark" />
 
 
     <me.relex.circleindicator.CircleIndicator
@@ -23,8 +24,73 @@
     <android.support.v4.view.ViewPager
         android:id="@+id/pager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
 
     </android.support.v4.view.ViewPager>
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/btnEditRows"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/indicator"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        app:fab_colorNormal="@color/colorAccent"
+        app:fab_colorPressed="@color/colorAccent"
+        app:fab_colorRipple="@android:color/white"
+        app:menu_animationDelayPerItem="10"
+        app:menu_fab_size="mini"
+        app:menu_icon="@drawable/ic_more_vert_black_24dp"
+        app:menu_labels_ellipsize="end"
+        app:menu_labels_singleLine="true">
+
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/btnEditAddRow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_add_black_24dp"
+            app:fab_size="mini" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/btnEditRemoveRow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_remove_black_24dp"
+            app:fab_size="mini" />
+    </com.github.clans.fab.FloatingActionMenu>
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/btnEditCols"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/indicator"
+        android:layout_toEndOf="@id/btnEditRows"
+        android:layout_toRightOf="@id/btnEditRows"
+        app:fab_colorNormal="@color/colorAccent"
+        app:fab_colorPressed="@color/colorAccent"
+        app:fab_colorRipple="@android:color/white"
+        app:menu_animationDelayPerItem="10"
+        app:menu_fab_size="mini"
+        app:menu_icon="@drawable/ic_more_horiz_black_24dp"
+        app:menu_labels_ellipsize="end"
+        app:menu_labels_singleLine="true">
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/btnEditAddColumn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_add_black_24dp"
+            app:fab_size="mini" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/btnEditRemoveColumn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_remove_black_24dp"
+            app:fab_size="mini" />
+    </com.github.clans.fab.FloatingActionMenu>
 
 </RelativeLayout>

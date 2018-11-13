@@ -35,9 +35,9 @@ public class SecondFragment extends BaseAbstractFragment {
         if (view == null) {
             view = inflater.inflate(layout, container, false);
         }
-        Bundle bundle = getArguments();
-        String message = Integer.toString(bundle.getInt("count"));
-        ((TextView) view.findViewById(R.id.tvResult)).setText(message);
+        //Bundle bundle = getArguments();
+        //String message = Integer.toString(bundle.getInt("count"));
+        ((TextView) view.findViewById(R.id.tvResult)).setText("Second");
         return view;
     }
 }

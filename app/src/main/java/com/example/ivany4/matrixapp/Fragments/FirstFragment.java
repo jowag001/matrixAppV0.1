@@ -41,8 +41,8 @@ public class FirstFragment extends BaseAbstractFragment {
 
         //fehler beim getTitle..
         //String message = bundle.getString(firstFragment.getTitle());
-        String message = Integer.toString(bundle.getInt("count"));
-        ((TextView) view.findViewById(R.id.tvResult)).setText(message);
+        //String message = Integer.toString(bundle.getInt("count"));
+        ((TextView) view.findViewById(R.id.tvResult)).setText("First");
         return view;
     }
 
